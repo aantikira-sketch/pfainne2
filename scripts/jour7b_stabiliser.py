@@ -229,12 +229,17 @@ y_test = yte
 y_pred = best_pred
 
 # 1. Fichier de prédictions pour S2
+# 1. Fichier de prédictions pour S2
+counts_train = np.bincount(ytr, minlength=4)
+counts_test  = np.bincount(yte, minlength=4)
+counts_total = counts_train + counts_test
+
 np.savez(
     "../results/predictions_jour7b.npz",
     y_test=y_test,
-    y_pred=y_pred
+    y_pred=y_pred,
+    class_counts=counts_total    # ← ligne ajoutée
 )
-print("✅ predictions_jour7b.npz sauvegardé dans results/")
 
 # 2. Métriques
 metrics = {
