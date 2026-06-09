@@ -1,9 +1,20 @@
-venv/ 
-__pycache__/ 
-*.pyc 
-data/raw/ 
-scripts/data/ 
-scripts/data/raw/ 
-results/ 
-*.npz 
-*.npy 
+# Environnement virtuel
+venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Données brutes MIT-BIH
+scripts/data/
+
+# Fichiers générés
+results/
+*.npz
+*.npy
+*.pt
+
+# Fichiers temporaires
+scripts/check.py
+scripts/run.txt
