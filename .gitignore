@@ -2,3 +2,8 @@ venv/
 __pycache__/ 
 *.pyc 
 data/raw/ 
+scripts/data/ 
+scripts/data/raw/ 
+results/ 
+*.npz 
+*.npy 
